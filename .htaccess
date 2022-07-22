@@ -1,0 +1,27 @@
+<IfModule mod_rewrite.c>
+RewriteEngine on
+ErrorDocument 404 http://localhost/Perpustakaan/app/admin/home.php?module=pages/views/v_404
+
+RewriteRule ^masuk$ login.php [L]
+RewriteRule ^pendaftaran$ register.php [L]
+RewriteRule ^lupa-password$ forgot_password.php [L]
+RewriteRule ^lupa-sandi-web$ password-web.php [L]
+
+#User
+RewriteRule ^user$ app/user [L]
+
+#Admin
+RewriteRule ^admin$ app/admin [L]
+
+#Admin
+RewriteRule ^petugas$ app/petugas [L]
+
+#Mahasiswa
+RewriteRule ^mahasiswa$ app/mahasiswa [L]
+
+#Pegawai
+RewriteRule ^pegawai$ app/pegawai [L]
+
+#Pemindai QR
+RewriteRule ^pindai-qr$ app/scanner [L]
+</IfModule>
